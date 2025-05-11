@@ -1,34 +1,46 @@
-abstract class Animal {
-    private String name;
-
-    public Animal(String name) {
-        this.name = name;
-    }
-
-    // Concrete method
-    public void eat() {
-        System.out.println(name + " is eating");
-    }
-
-    // Abstract method (must be implemented by subclasses)
-    public abstract void makeSound();
-}
-
-class Dog extends Animal {
-    public Dog(String name) {
-        super(name);
-    }
-
-    @Override
-    public void makeSound() {
-        System.out.println("Woof woof!");
-    }
-}
 
 public class Test {
+
+    public boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            // Skip non-alphanumeric characters from left
+            while (left < right && !Character.isLetter(s.charAt(left))) {
+                left++;
+            }
+
+            // Skip non-alphanumeric characters from right
+            while (left < right && !Character.isLetter(s.charAt(right))) {
+                right--;
+            }
+
+            // Compare characters (case-insensitive)
+            if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
-        Animal myDog = new Dog("Buddy");
-        myDog.eat();      // Inherited concrete method
-        myDog.makeSound(); // Implemented abstract method
+
+        String s = "abc efg";
+
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i)==' '){
+                System.out.println("mphke");
+                continue;
+            }
+            System.out.println(s.charAt(i));
+        }
+
+        System.out.println(s);
+
     }
 }
