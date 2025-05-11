@@ -7,11 +7,11 @@ public class Valid_Palindrome_125 {
 
         while(left < right) {
 
-            while(left < right && !Character.isLetter(s.charAt(left))) {
+            while(left < right && !Character.isLetterOrDigit(s.charAt(left))) {
                 left += 1;
             }
 
-            while(left < right && !Character.isLetter(s.charAt(right))) {
+            while(left < right && !Character.isLetterOrDigit(s.charAt(right))) {
                 right -= 1;
             }
 
