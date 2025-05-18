@@ -12,7 +12,7 @@ public class Two_pointers_technique_DSA {
         int j = 0;
 
         while (i < arr1.length && j < arr2.length) {
-            if (arr1[i] <= arr2[j]) {
+            if(arr1[i] <= arr2[j]) {
                 mylist.add(arr1[i]);
                 i++;
             } else {
@@ -26,7 +26,6 @@ public class Two_pointers_technique_DSA {
             i++;
         }
 
-        // Add remaining elements from arr2
         while (j < arr2.length) {
             mylist.add(arr2[j]);
             j++;
