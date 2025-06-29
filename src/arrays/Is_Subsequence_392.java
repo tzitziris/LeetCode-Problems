@@ -1,6 +1,9 @@
+package arrays;
+
+public class Is_Subsequence_392 {
 
 
-public class Test {
+
     public static void main(String[] args) {
 
     }
