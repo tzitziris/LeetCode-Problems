@@ -57,27 +57,13 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-        // Creating l1 = [9,9,9,9,9,9,9]
-        ListNode l1 = new ListNode(9);
-        l1.next = new ListNode(9);
-        l1.next.next = new ListNode(9);
-        l1.next.next.next = new ListNode(9);
-        l1.next.next.next.next = new ListNode(9);
-        l1.next.next.next.next.next = new ListNode(9);
-        l1.next.next.next.next.next.next = new ListNode(9);
+        // create int type variable
+        int num = 10;
+        System.out.println("The integer value is: " + num);
 
-        // Creating l2 = [9,9,9,9]
-        ListNode l2 = new ListNode(9);
-        l2.next = new ListNode(9);
-        l2.next.next = new ListNode(9);
-        l2.next.next.next = new ListNode(9);
-
-        // Call the function
-        Solution sol = new Solution();
-        ListNode result = sol.addTwoNumbers(l1, l2);
-
-        // Print the result
-        printList(result);
+        // converts int to string type
+        String data = String.valueOf(num);
+        System.out.println("The string value is: " + data);
     }
 
 
