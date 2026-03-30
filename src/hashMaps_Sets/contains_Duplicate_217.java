@@ -1,28 +1,19 @@
 package hashMaps_Sets;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class contains_Duplicate_217 {
     public boolean containsDuplicate(int[] nums) {
-
-        HashSet<Integer> myHash = new HashSet<Integer>();
-
-        boolean flag = false;
-
-        for (int i=0; i<nums.length; i++) {
-            if (i == 0) {
-                myHash.add(nums[i]);
+        int n = nums.length;
+        Set<Integer> myHash = new HashSet();
+        for (int i = 0; i < n; i++) {
+            if (myHash.contains(nums[i]) == true) {
+                return true;
             }
-            else {
-                if (myHash.contains(nums[i]) == true){
-                    flag = true;
-                    break;
-                }
-                myHash.add(nums[i]);
-            }
+            myHash.add(nums[i]);
         }
-
-        return flag;
+        return false;
     }
 
     public static void main(String[] args) {
